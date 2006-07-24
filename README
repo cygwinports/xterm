@@ -1,0 +1,78 @@
+xterm
+------------------------------------------
+The xterm program is a terminal emulator for the X Window System. It
+provides DEC VT102 and Tektronix 4014 compatible terminals for programs
+that can't use the window system directly.
+
+This version implements ISO/ANSI colors using the 'new' color model
+(i.e., background color erase). It also implements most of the control
+sequences for VT220.
+
+Runtime requirements:
+  cygwin-1.5.21-1
+  bash-3.1-6
+  libX11_6-1.0.2-1
+  libXaw8-1.0.2-1
+  libXft2-2.1.10-1
+  terminfo-5.5_20060323-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.21-1
+  autoconf2.5-2.59-2
+  automake1.9-1.9.6-1
+  binutils-20050610-1
+  bison-2.1-1
+  cygport-0.2.2-1
+  flex-2.5.33-1
+  gawk-3.1.5-2
+  gcc-core-3.4.4-1
+  libtool1.5-1.5.22-1
+  make-3.80-1
+  sed-4.1.5-1
+
+Canonical website:
+  http://dickey.his.com/xterm/
+
+Canonical download:
+  ftp://invisible-island.net/xterm/
+
+-------------------------------------------
+
+Build instructions:
+  unpack xterm-215-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./xterm-215-X.cygport all
+
+This will create:
+  /usr/src/xterm-215-X-src.tar.bz2
+  /usr/src/xterm-215-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/X11/app-defaults/UXTerm
+  /etc/X11/app-defaults/XTerm
+  /etc/X11/app-defaults/XTerm-color
+  /usr/bin/resize.exe
+  /usr/bin/uxterm
+  /usr/bin/xterm.exe
+  /usr/share/doc/Cygwin/xterm-215.README
+  /usr/share/doc/xterm-215/INSTALL
+  /usr/share/doc/xterm-215/README
+  /usr/share/man/man1/resize.1.gz
+  /usr/share/man/man1/xterm.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 215-1 -----
+Version bump.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
