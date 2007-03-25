@@ -9,27 +9,23 @@ This version implements ISO/ANSI colors using the 'new' color model
 sequences for VT220.
 
 Runtime requirements:
-  cygwin-1.5.21-1
-  bash-3.1-6
-  libX11_6-1.0.2-1
+  cygwin-1.5.24-2
+  bash
+  libX11_6-1.1.1-1
   libXaw8-1.0.2-1
-  libXft2-2.1.10-1
-  terminfo-5.5_20060323-1
+  libXft2-2.1.12-1
+  terminfo-5.5_20061104-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.21-1
-  autoconf2.5-2.59-2
-  automake1.9-1.9.6-1
-  binutils-20050610-1
-  bison-2.1-1
-  cygport-0.2.2-1
-  flex-2.5.33-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  libtool1.5-1.5.22-1
-  make-3.80-1
-  sed-4.1.5-1
+  cygwin-1.5.24-2
+  binutils-20050817-1
+  cygport-0.2.11-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
 
 Canonical website:
   http://dickey.his.com/xterm/
@@ -40,15 +36,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xterm-215-X-src.tar.bz2
+  unpack xterm-225-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xterm-215-X.cygport all
+  cygport ./xterm-225-X.cygport all
 
 This will create:
-  /usr/src/xterm-215-X-src.tar.bz2
-  /usr/src/xterm-215-X.tar.bz2
+  /usr/src/xterm-225-X-src.tar.bz2
+  /usr/src/xterm-225-X.tar.bz2
 
 -------------------------------------------
 
@@ -60,15 +56,18 @@ Files included in the binary package:
   /usr/bin/resize.exe
   /usr/bin/uxterm
   /usr/bin/xterm.exe
-  /usr/share/doc/Cygwin/xterm-215.README
-  /usr/share/doc/xterm-215/INSTALL
-  /usr/share/doc/xterm-215/README
+  /usr/share/doc/Cygwin/xterm-225.README
+  /usr/share/doc/xterm-225/INSTALL
+  /usr/share/doc/xterm-225/README
   /usr/share/man/man1/resize.1.gz
   /usr/share/man/man1/xterm.1.gz
 
 ------------------
 
 Port Notes:
+
+----- version 225-1 -----
+Version bump.
 
 ----- version 215-1 -----
 Version bump.
