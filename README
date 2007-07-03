@@ -36,15 +36,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xterm-226-X-src.tar.bz2
+  unpack xterm-227-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xterm-226-X.cygport all
+  cygport ./xterm-227-X.cygport all
 
 This will create:
-  /usr/src/xterm-226-X-src.tar.bz2
-  /usr/src/xterm-226-X.tar.bz2
+  /usr/src/xterm-227-X-src.tar.bz2
+  /usr/src/xterm-227-X.tar.bz2
 
 -------------------------------------------
 
@@ -56,9 +56,9 @@ Files included in the binary package:
   /usr/bin/resize.exe
   /usr/bin/uxterm
   /usr/bin/xterm.exe
-  /usr/share/doc/Cygwin/xterm-226.README
-  /usr/share/doc/xterm-226/INSTALL
-  /usr/share/doc/xterm-226/README
+  /usr/share/doc/Cygwin/xterm-227.README
+  /usr/share/doc/xterm-227/INSTALL
+  /usr/share/doc/xterm-227/README
   /usr/share/man/man1/resize.1.gz
   /usr/share/man/man1/xterm.1.gz
 
@@ -66,7 +66,7 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 226-1 -----
+----- version 227-1 -----
 Version bump.
 
 ----- version 225-1 -----
