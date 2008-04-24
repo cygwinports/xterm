@@ -1,0 +1,37 @@
+DESCRIPTION="X11 virtual terminal"
+HOMEPAGE="http://dickey.his.com/xterm/"
+SRC_URI="ftp://invisible-island.net/xterm/${P}.tgz
+         ftp://invisible-island.net/xterm/${P}.tgz.asc"
+
+src_compile() {
+	check_prog_req pkg-config
+
+	cd ${B}
+	cygconf \
+		--disable-desktop \
+		--disable-setuid \
+		--enable-ansi-color \
+		--enable-256-color \
+		--enable-broken-osc \
+		--enable-broken-st \
+		--enable-dabbrev \
+		--enable-doublechars \
+		--enable-freetype \
+		--enable-i18n \
+		--enable-load-vt-fonts \
+		--enable-logging \
+		--enable-luit --enable-mini-luit \
+		--enable-tcap-query \
+		--enable-toolbar \
+		--enable-wide-chars \
+		--with-app-defaults=$(pkg-config --variable=appdefaultdir xt)
+
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	cyginstall -j1
+
+	domenu ${S}/*.desktop
+}
