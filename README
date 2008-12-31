@@ -23,7 +23,7 @@ Runtime requirements:
 Build requirements:
 (besides corresponding -devel packages)
   binutils-20060817-1
-  cygport-0.4.2-1
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   make-3.81-1
@@ -39,15 +39,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xterm-237-X-src.tar.bz2
+  unpack xterm-238-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xterm-237-X.cygport all
+  cygport ./xterm-238-X.cygport all
 
 This will create:
-  /usr/src/xterm-237-X-src.tar.bz2
-  /usr/src/xterm-237-X.tar.bz2
+  /usr/src/xterm-238-X-src.tar.bz2
+  /usr/src/xterm-238-X.tar.bz2
 
 -------------------------------------------
 
@@ -63,8 +63,8 @@ Files included in the binary package:
   /usr/bin/xterm.exe
   /usr/share/applications/uxterm.desktop
   /usr/share/applications/xterm.desktop
-  /usr/share/doc/xterm-237/INSTALL
-  /usr/share/doc/xterm-237/README
+  /usr/share/doc/xterm-238/INSTALL
+  /usr/share/doc/xterm-238/README
   /usr/share/man/man1/koi8rxterm.1.gz
   /usr/share/man/man1/resize.1.gz
   /usr/share/man/man1/uxterm.1.gz
@@ -77,6 +77,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 238-1 -----
+Version bump.
 
 ----- version 237-2 -----
 Rebuilt for Xaw7.
