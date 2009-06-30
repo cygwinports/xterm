@@ -10,6 +10,9 @@ sequences for VT220.
 
 Runtime requirements:
   cygwin-1.5.25-15
+  font-alias
+  font-adobe-dpi75
+  font-misc-misc
   libICE6-1.0.4-1
   libX11_6-1.1.5-2
   libXaw7-1.0.4-2
