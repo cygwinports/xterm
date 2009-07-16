@@ -9,28 +9,29 @@ This version implements ISO/ANSI colors using the 'new' color model
 sequences for VT220.
 
 Runtime requirements:
-  cygwin-1.5.25-15
+  cygwin-1.7.0-51
   font-alias
   font-adobe-dpi75
   font-misc-misc
-  libICE6-1.0.4-1
-  libX11_6-1.1.5-2
-  libXaw7-1.0.4-2
-  libXft2-2.1.13-1
-  libXmu6-1.0.4-1
-  libXt6-1.0.5-1
+  libgcc1-4.3.2-2
+  libICE6-1.0.5-10
+  libX11_6-1.2.1-1
+  libXaw7-1.0.6-1
+  libXft2-2.1.13-10
+  libXmu6-1.0.4-10
+  libXt6-1.0.6-1
   libfontconfig1-2.6.0-1
   luit-1.0.2-1
-  terminfo-5.5_20061104-1
+  terminfo-5.7_20090220-10
 
 Build requirements:
 (besides corresponding -devel packages)
   binutils-20060817-1
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  make-3.81-1
-  pkg-config-0.23a-2
+  cygport-0.9.7-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  make-3.81-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -42,15 +43,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xterm-242-X-src.tar.bz2
+  unpack xterm-243-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xterm-242-X.cygport all
+  cygport ./xterm-243-X.cygport all
 
 This will create:
-  /usr/src/xterm-242-X-src.tar.bz2
-  /usr/src/xterm-242-X.tar.bz2
+  /usr/src/xterm-243-X-src.tar.bz2
+  /usr/src/xterm-243-X.tar.bz2
 
 -------------------------------------------
 
@@ -66,8 +67,8 @@ Files included in the binary package:
   /usr/bin/xterm.exe
   /usr/share/applications/uxterm.desktop
   /usr/share/applications/xterm.desktop
-  /usr/share/doc/xterm-242/INSTALL
-  /usr/share/doc/xterm-242/README
+  /usr/share/doc/xterm/INSTALL
+  /usr/share/doc/xterm/README
   /usr/share/man/man1/koi8rxterm.1.gz
   /usr/share/man/man1/resize.1.gz
   /usr/share/man/man1/uxterm.1.gz
@@ -81,41 +82,8 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 242-1 -----
-Version bump.
-
------ version 238-1 -----
-Version bump.
-
------ version 237-2 -----
-Rebuilt for Xaw7.
-
------ version 237-1 -----
-Version bump.
-
------ version 235-1 -----
-Version bump.
-
------ version 233-1 -----
-Version bump.
-
------ version 231-1 -----
-Version bump.  Enabled many optional features.
-
------ version 229-1 -----
-Version bump.
-
------ version 228-1 -----
-Version bump.
-
------ version 227-1 -----
-Version bump.
-
------ version 225-1 -----
-Version bump.
-
------ version 215-1 -----
-Version bump.
+----- version 243-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
