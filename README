@@ -43,46 +43,21 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xterm-249-X-src.tar.bz2
+  unpack xterm-250-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xterm-249-X.cygport all
+  cygport ./xterm-250-X.cygport all
 
 This will create:
-  /usr/src/xterm-249-X-src.tar.bz2
-  /usr/src/xterm-249-X.tar.bz2
+  /usr/src/xterm-250-X-src.tar.bz2
+  /usr/src/xterm-250-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /etc/X11/app-defaults/KOI8RXTerm
-  /etc/X11/app-defaults/UXTerm
-  /etc/X11/app-defaults/XTerm
-  /etc/X11/app-defaults/XTerm-color
-  /usr/bin/koi8rxterm
-  /usr/bin/resize.exe
-  /usr/bin/uxterm
-  /usr/bin/xterm.exe
-  /usr/share/applications/uxterm.desktop
-  /usr/share/applications/xterm.desktop
-  /usr/share/doc/xterm/INSTALL
-  /usr/share/doc/xterm/README
-  /usr/share/man/man1/koi8rxterm.1.gz
-  /usr/share/man/man1/resize.1.gz
-  /usr/share/man/man1/uxterm.1.gz
-  /usr/share/man/man1/xterm.1.gz
-  /usr/share/pixmaps/xterm-color_32x32.xpm
-  /usr/share/pixmaps/xterm-color_48x48.xpm
-  /usr/share/pixmaps/xterm_32x32.xpm
-  /usr/share/pixmaps/xterm_48x48.xpm
-
-------------------
-
 Port Notes:
 
------ version 249-1 -----
+----- version 250-1 -----
 Version bump.
 
 ----- version 248-1 -----
