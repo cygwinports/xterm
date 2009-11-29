@@ -2,10 +2,16 @@ DESCRIPTION="X11 virtual terminal"
 HOMEPAGE="http://dickey.his.com/xterm/"
 SRC_URI="ftp://invisible-island.net/xterm/${P}.tgz
          ftp://invisible-island.net/xterm/${P}.tgz.asc"
+PATCH_URI="
+	http://patch-tracker.debian.org/patch/series/dl/xterm/250-1/900_debian_xterm.diff
+	http://patch-tracker.debian.org/patch/series/dl/xterm/250-1/901_xterm_manpage.diff
+	http://patch-tracker.debian.org/patch/series/dl/xterm/250-1/904_fontops.diff
+"
 
 src_compile() {
 	check_prog_req pkg-config
 
+	# cf_cv_svr4: fooled by presence of libelf
 	cd ${B}
 	cygconf \
 		--disable-desktop \
@@ -24,7 +30,8 @@ src_compile() {
 		--enable-tcap-query \
 		--enable-toolbar \
 		--enable-wide-chars \
-		--with-app-defaults=$(pkg-config --variable=appdefaultdir xt)
+		--with-app-defaults=$(pkg-config --variable=appdefaultdir xt) \
+		cf_cv_svr4=no
 
 	cygmake
 }
