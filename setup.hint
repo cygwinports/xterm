@@ -1,5 +1,5 @@
 category: X11 Shells
-requires: bash libfontconfig1 libgcc1 libICE6 libncurses9 libX11_6 libXaw7 libXft2 libXmu6 libXt6 luit font-alias font-adobe-dpi75 font-misc-misc
+requires: bash libfontconfig1 libgcc1 libICE6 libncurses10 libX11_6 libXaw7 libXft2 libXmu6 libXt6 luit font-alias font-adobe-dpi75 font-misc-misc
 sdesc: "X11 terminal emulator"
 ldesc: "The xterm program is a terminal emulator for the X Window
 System. It provides DEC VT102 and Tektronix 4014 compatible terminals

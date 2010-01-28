@@ -9,14 +9,14 @@ This version implements ISO/ANSI colors using the 'new' color model
 sequences for VT220.
 
 Runtime requirements:
-  cygwin-1.7.0-67
+  cygwin-1.7.1-1
   font-alias
   font-adobe-dpi75
   font-misc-misc
   libfontconfig1-2.7.3-1
-  libgcc1-4.3.4-1
+  libgcc1-4.3.4-3
   libICE6-1.0.6-1
-  libncurses9-5.7-16
+  libncurses10-5.7-18
   libX11_6-1.3.2-2
   libXaw7-1.0.7-1
   libXft2-2.1.14-1
@@ -27,9 +27,9 @@ Runtime requirements:
 Build requirements:
 (besides corresponding -devel packages)
   binutils-2.19.51-1
-  cygport-0.9.10-1
+  cygport-0.9.80-1
   gawk-3.1.7-1
-  gcc4-core-4.3.4-1
+  gcc4-core-4.3.4-3
   make-3.81-2
   pkg-config-0.23b-10
   sed-4.1.5-2
@@ -43,19 +43,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xterm-251-X-src.tar.bz2
+  unpack xterm-255-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xterm-251-X.cygport all
+  cygport ./xterm-255-X.cygport all
 
 This will create:
-  /usr/src/xterm-251-X-src.tar.bz2
-  /usr/src/xterm-251-X.tar.bz2
+  /usr/src/xterm-255-X-src.tar.bz2
+  /usr/src/xterm-255-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 255-1 -----
+Version bump.
 
 ----- version 251-1 -----
 Version bump.
