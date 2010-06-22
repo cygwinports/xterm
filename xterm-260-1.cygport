@@ -3,9 +3,7 @@ HOMEPAGE="http://dickey.his.com/xterm/"
 SRC_URI="ftp://invisible-island.net/xterm/${P}.tgz
          ftp://invisible-island.net/xterm/${P}.tgz.asc"
 PATCH_URI="
-	http://patch-tracker.debian.org/patch/series/dl/xterm/253-1/900_debian_xterm.diff
-	http://patch-tracker.debian.org/patch/series/dl/xterm/253-1/901_xterm_manpage.diff
-	http://patch-tracker.debian.org/patch/series/dl/xterm/253-1/904_fontops.diff
+	http://patch-tracker.debian.org/patch/series/dl/xterm/259-1/900_debian_xterm.diff
 "
 
 CPPFLAGS+=" -I/usr/include/ncurses"
