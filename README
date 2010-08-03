@@ -17,7 +17,7 @@ Runtime requirements:
   libgcc1-4.3.4-3
   libICE6-1.0.6-1
   libncurses10-5.7-18
-  libX11_6-1.3.3-1
+  libX11_6-1.3.4-1
   libXaw7-1.0.7-1
   libXft2-2.1.14-1
   libXmu6-1.0.5-1
@@ -27,12 +27,12 @@ Runtime requirements:
 Build requirements:
 (besides corresponding -devel packages)
   binutils-2.20.51-2
-  cygport-0.9.85-1
+  cygport-0.9.88-1
   gawk-3.1.7-1
   gcc4-core-4.3.4-3
   make-3.81-2
   pkg-config-0.23b-10
-  sed-4.1.5-2
+  sed-4.2.1-1
 
 Canonical website:
   http://invisible-island.net/xterm/
@@ -43,19 +43,23 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xterm-260-X-src.tar.bz2
+  unpack xterm-261-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xterm-260-X.cygport all
+  cygport ./xterm-261-X.cygport all
 
 This will create:
-  /usr/src/xterm-260-X-src.tar.bz2
-  /usr/src/xterm-260-X.tar.bz2
+  /usr/src/xterm-261-X-src.tar.bz2
+  /usr/src/xterm-261-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 261-1 -----
+Version bump.
+Configured with --disable-narrowproto to fix scrollbar issues.
 
 ----- version 260-1 -----
 Version bump.

@@ -3,7 +3,7 @@ HOMEPAGE="http://dickey.his.com/xterm/"
 SRC_URI="ftp://invisible-island.net/xterm/${P}.tgz
          ftp://invisible-island.net/xterm/${P}.tgz.asc"
 PATCH_URI="
-	http://patch-tracker.debian.org/patch/series/dl/xterm/259-1/900_debian_xterm.diff
+	http://patch-tracker.debian.org/patch/series/dl/xterm/261-1/900_debian_xterm.diff
 "
 
 CPPFLAGS+=" -I/usr/include/ncurses"
@@ -15,6 +15,7 @@ src_compile() {
 	cd ${B}
 	cygconf \
 		--disable-desktop \
+		--disable-narrowproto \
 		--disable-setuid \
 		--enable-ansi-color \
 		--enable-256-color \
