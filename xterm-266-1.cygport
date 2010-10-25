@@ -1,10 +1,7 @@
 DESCRIPTION="X11 virtual terminal"
 HOMEPAGE="http://dickey.his.com/xterm/"
-SRC_URI="ftp://invisible-island.net/xterm/${P}.tgz
-         ftp://invisible-island.net/xterm/${P}.tgz.asc"
-PATCH_URI="
-	http://patch-tracker.debian.org/patch/series/dl/xterm/261-1/900_debian_xterm.diff
-"
+SRC_URI="ftp://invisible-island.net/xterm/current/${P}.tgz"
+PATCH_URI="266-cygwin.patch"
 
 CPPFLAGS+=" -I/usr/include/ncurses"
 
@@ -15,6 +12,7 @@ src_compile() {
 	cd ${B}
 	cygconf \
 		--disable-desktop \
+		--disable-imake \
 		--disable-narrowproto \
 		--disable-setuid \
 		--enable-ansi-color \

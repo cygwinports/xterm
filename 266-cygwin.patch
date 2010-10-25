@@ -1,0 +1,86 @@
+http://sourceware.org/bugzilla/show_bug.cgi?id=11303
+
+--- origsrc/xterm-266/XTerm-col.ad	2009-08-15 10:56:29.000000000 -0500
++++ src/xterm-266/XTerm-col.ad	2010-10-25 01:18:07.410940900 -0500
+@@ -38,8 +38,8 @@
+ *VT100*dynamicColors: on
+ 
+ ! Uncomment this for "white" text on a dark background.
+-!*VT100*foreground: gray90
+-!*VT100*background: black
++*VT100*foreground: gray90
++*VT100*background: black
+ 
+ ! - OR -
+ ! Uncomment this for black text on a "white" background.
+@@ -144,20 +144,29 @@
+ *Form.background: AntiqueWhite
+ *form.background: AntiqueWhite
+ 
++*mainMenu*background: AntiqueWhite
++*mainMenu*foreground: gray15
++*vtMenu*background: AntiqueWhite
++*vtMenu*foreground: gray15
++*fontMenu*background: AntiqueWhite
++*fontMenu*foreground: gray15
++*tekMenu*background: AntiqueWhite
++*tekMenu*foreground: gray15
++
+ ! The following two sections take advantage of new features in version 7
+ ! of the Athena widget library.  Comment them out if you have a shallow
+ ! color depth.
+ !*SimpleMenu*backgroundPixmap:   gradient:vertical?dimension=350&start=gray90&end=gray60
+ !*SimpleMenu*foreground:         gray15
+ 
+-!*VT100.scrollbar.thumb:         vlines2
+-!*VT100.scrollbar.width:         14
+-!*VT100.scrollbar.background:    gray60
+-!*VT100.scrollbar.foreground:    rgb:a/5/5
+-!*VT100.scrollbar.borderWidth:   0
+-!*VT100.scrollbar.displayList:\
+-!foreground      gray90;\
+-!lines           1,-1,-1,-1,-1,1;\
+-!foreground      gray60;\
+-!lines           -1,0,0,0,0,-1
++*VT100.scrollbar.thumb:         vlines2
++*VT100.scrollbar.width:         14
++*VT100.scrollbar.background:    gray60
++*VT100.scrollbar.foreground:    rgb:a/5/5
++*VT100.scrollbar.borderWidth:   0
++*VT100.scrollbar.displayList:\
++foreground      gray90;\
++lines           1,-1,-1,-1,-1,1;\
++foreground      gray60;\
++lines           -1,0,0,0,0,-1
+ #endif
+--- origsrc/xterm-266/XTerm.ad	2010-06-15 05:55:59.000000000 -0500
++++ src/xterm-266/XTerm.ad	2010-10-25 01:26:11.475333500 -0500
+@@ -249,3 +249,7 @@
+ !*allowTcapOps: false
+ !*allowTitleOps: false
+ !*allowWindowOps: false
++
++*backarrowKeyIsErase: true
++*metaSendsEscape: true
++*ptyInitialErase: true
+--- origsrc/xterm-266/termcap	2009-11-08 18:24:26.000000000 -0600
++++ src/xterm-266/termcap	2010-10-25 01:22:29.699687000 -0500
+@@ -53,7 +53,7 @@ xf|xterm-new|modern xterm:\
+ 	:*6=\EOF:@7=\EOF:F1=\E[23~:F2=\E[24~:K2=\EOE:Km=\E[M:\
+ 	:k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS:k5=\E[15~:k6=\E[17~:\
+ 	:k7=\E[18~:k8=\E[19~:k9=\E[20~:k;=\E[21~:kH=\EOF:kI=\E[2~:\
+-	:kN=\E[6~:kP=\E[5~:kd=\EOB:kh=\EOH:kl=\EOD:kr=\EOC:ku=\EOA:\
++	:kN=\E[6~:kP=\E[5~:kb=^?:kd=\EOB:kh=\EOH:kl=\EOD:kr=\EOC:ku=\EOA:\
+ 	:tc=xterm-basic:
+ #
+ # This chunk is used for building the VT220/Sun/PC keyboard variants.
+--- origsrc/xterm-266/terminfo	2007-11-11 17:26:52.000000000 -0600
++++ src/xterm-266/terminfo	2010-10-25 01:20:50.113333100 -0500
+@@ -133,6 +133,7 @@ xterm-new|modern xterm terminal emulator
+ 	npc,
+ 	indn=\E[%p1%dS,
+ 	kb2=\EOE,
++	kbs=\177,
+ 	kcbt=\E[Z,
+ 	kent=\EOM,
+ 	rin=\E[%p1%dT,
