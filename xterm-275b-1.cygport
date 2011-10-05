@@ -1,7 +1,12 @@
 DESCRIPTION="X11 virtual terminal"
 HOMEPAGE="http://dickey.his.com/xterm/"
-SRC_URI="ftp://invisible-island.net/xterm/current/${P}.tgz"
+SRC_URI="ftp://invisible-island.net/xterm/current/${P%[a-z]}.tgz"
+SRC_DIR=${P%[a-z]}
 PATCH_URI="266-cygwin.patch"
+
+case ${PV} in *[a-z])
+	PATCH_URI+=" ftp://invisible-island.net/temp/${P}.patch.gz" ;;
+esac
 
 CPPFLAGS+=" -I/usr/include/ncurses"
 
