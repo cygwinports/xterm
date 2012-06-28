@@ -63,17 +63,6 @@ http://sourceware.org/bugzilla/show_bug.cgi?id=11303
 +*backarrowKeyIsErase: true
 +*metaSendsEscape: true
 +*ptyInitialErase: true
---- origsrc/xterm-266/termcap	2009-11-08 18:24:26.000000000 -0600
-+++ src/xterm-266/termcap	2010-10-25 01:22:29.699687000 -0500
-@@ -53,7 +53,7 @@ xf|xterm-new|modern xterm:\
- 	:*6=\EOF:@7=\EOF:F1=\E[23~:F2=\E[24~:K2=\EOE:Km=\E[M:\
- 	:k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS:k5=\E[15~:k6=\E[17~:\
- 	:k7=\E[18~:k8=\E[19~:k9=\E[20~:k;=\E[21~:kH=\EOF:kI=\E[2~:\
--	:kN=\E[6~:kP=\E[5~:kd=\EOB:kh=\EOH:kl=\EOD:kr=\EOC:ku=\EOA:\
-+	:kN=\E[6~:kP=\E[5~:kb=^?:kd=\EOB:kh=\EOH:kl=\EOD:kr=\EOC:ku=\EOA:\
- 	:tc=xterm-basic:
- #
- # This chunk is used for building the VT220/Sun/PC keyboard variants.
 --- origsrc/xterm-266/terminfo	2007-11-11 17:26:52.000000000 -0600
 +++ src/xterm-266/terminfo	2010-10-25 01:20:50.113333100 -0500
 @@ -133,6 +133,7 @@ xterm-new|modern xterm terminal emulator
