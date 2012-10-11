@@ -1,8 +1,19 @@
-DESCRIPTION="X11 virtual terminal"
+NAME="xterm"
+VERSION=283
+RELEASE=1
+CATEGORY="X11 Shells"
+SUMMARY="X11 terminal emulator"
+DESCRIPTION="The xterm program is a terminal emulator for the X Window
+System. It provides DEC VT102 and Tektronix 4014 compatible terminals
+for programs that can't use the window system directly.
+This version implements ISO/ANSI colors using the 'new' color model
+(i.e., background color erase). It also implements most of the control
+sequences for VT220."
 HOMEPAGE="http://dickey.his.com/xterm/"
 SRC_URI="ftp://invisible-island.net/xterm/current/${P%[a-z]}.tgz"
 SRC_DIR=${P%[a-z]}
 PATCH_URI="266-cygwin.patch"
+REQUIRES="luit font-alias font-adobe-dpi75 font-misc-misc"
 
 case ${PV} in *[a-z])
 	PATCH_URI+=" ftp://invisible-island.net/temp/${P}.patch.gz" ;;
