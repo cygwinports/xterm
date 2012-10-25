@@ -1,5 +1,5 @@
 NAME="xterm"
-VERSION=284
+VERSION=285
 RELEASE=1
 CATEGORY="X11 Shells"
 SUMMARY="X11 terminal emulator"
@@ -37,6 +37,7 @@ src_compile() {
 		--enable-broken-st \
 		--enable-dabbrev \
 		--enable-doublechars \
+		--enable-exec-xterm \
 		--enable-freetype \
 		--enable-i18n \
 		--enable-load-vt-fonts \
