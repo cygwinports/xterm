@@ -1,5 +1,5 @@
 NAME="xterm"
-VERSION=291
+VERSION=301
 RELEASE=1
 CATEGORY="X11 Shells"
 SUMMARY="X11 terminal emulator"
@@ -19,7 +19,7 @@ case ${PV} in *[a-z])
 	PATCH_URI+=" ftp://invisible-island.net/temp/${P}.patch.gz" ;;
 esac
 
-CPPFLAGS+=" -I/usr/include/ncurses"
+CPPFLAGS+=" -I/usr/include/ncursesw"
 
 src_compile() {
 	check_prog_req pkg-config
@@ -47,6 +47,7 @@ src_compile() {
 		--enable-toolbar \
 		--enable-wide-chars \
 		--with-app-defaults=$(pkg-config --variable=appdefaultdir xt) \
+		cf_cv_lib_tgetent=-lncursesw \
 		cf_cv_svr4=no
 
 	cygmake
