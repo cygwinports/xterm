@@ -1,5 +1,5 @@
 NAME="xterm"
-VERSION=302
+VERSION=305
 RELEASE=1
 CATEGORY="X11 Shells"
 SUMMARY="X11 terminal emulator"
