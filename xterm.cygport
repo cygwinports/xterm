@@ -1,5 +1,5 @@
 NAME="xterm"
-VERSION=305
+VERSION=308
 RELEASE=1
 CATEGORY="X11 Shells"
 SUMMARY="X11 terminal emulator"
@@ -18,8 +18,6 @@ REQUIRES="luit font-alias font-adobe-dpi75 font-misc-misc"
 case ${PV} in *[a-z])
 	PATCH_URI+=" ftp://invisible-island.net/temp/${P}.patch.gz" ;;
 esac
-
-CPPFLAGS+=" -I/usr/include/ncursesw"
 
 src_compile() {
 	check_prog_req pkg-config
