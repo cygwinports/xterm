@@ -1,5 +1,5 @@
 NAME="xterm"
-VERSION=320
+VERSION=324
 RELEASE=1
 CATEGORY="X11 Shells"
 SUMMARY="X11 terminal emulator"
@@ -10,14 +10,19 @@ This version implements ISO/ANSI colors using the 'new' color model
 (i.e., background color erase). It also implements most of the control
 sequences for VT220."
 HOMEPAGE="http://dickey.his.com/xterm/"
-SRC_URI="ftp://invisible-island.net/xterm/current/${P%[a-z]}.tgz"
-SRC_DIR=${P%[a-z]}
-PATCH_URI="266-cygwin.patch"
-REQUIRES="luit font-alias font-adobe-dpi75 font-misc-misc"
+SRC_URI="ftp://invisible-island.net/xterm/current/xterm-${VERSION%[a-z]}.tgz"
+SRC_DIR="xterm-${VERSION%[a-z]}"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/rpms/xterm.git/plain/xterm-desktop.patch
+	http://pkgs.fedoraproject.org/cgit/rpms/xterm.git/plain/xterm-man-paths.patch
+	266-cygwin.patch
+"
 
-case ${PV} in *[a-z])
-	PATCH_URI+=" ftp://invisible-island.net/temp/${P}.patch.gz" ;;
+case ${VERSION} in *[a-z])
+	PATCH_URI+=" ftp://invisible-island.net/temp/xterm-${VERSION}.patch.gz" ;;
 esac
+
+REQUIRES="luit xorg-x11-fonts-dpi75 xorg-x11-fonts-misc"
 
 src_compile() {
 	check_prog_req pkg-config
@@ -40,11 +45,13 @@ src_compile() {
 		--enable-i18n \
 		--enable-load-vt-fonts \
 		--enable-logging \
-		--enable-luit --enable-mini-luit \
+		--enable-luit \
 		--enable-tcap-query \
 		--enable-toolbar \
 		--enable-wide-chars \
 		--with-app-defaults=$(pkg-config --variable=appdefaultdir xt) \
+		--with-icon-theme=hicolor \
+		--with-icondir=/usr/share/icons \
 		cf_cv_lib_tgetent=-lncursesw \
 		cf_cv_svr4=no
 
