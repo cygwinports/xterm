@@ -1,0 +1,51 @@
+--- origsrc/xterm-325/aclocal.m4	2016-05-28 13:42:52.000000000 -0500
++++ src/xterm-325/aclocal.m4	2016-08-09 10:38:17.861795800 -0500
+@@ -3975,7 +3975,7 @@ case $host_os in
+ (aix[[4-7]]*)
+ 	cf_xopen_source="-D_ALL_SOURCE"
+ 	;;
+-(cygwin|msys)
++(msys)
+ 	cf_XOPEN_SOURCE=600
+ 	;;
+ (darwin[[0-8]].*)
+@@ -4003,7 +4003,7 @@ case $host_os in
+ 	cf_xopen_source="-D_SGI_SOURCE"
+ 	cf_XOPEN_SOURCE=
+ 	;;
+-(linux*|gnu*|mint*|k*bsd*-gnu)
++(linux*|gnu*|mint*|k*bsd*-gnu|cygwin*)
+ 	CF_GNU_SOURCE
+ 	;;
+ (minix*)
+--- origsrc/xterm-325/configure	2016-05-28 13:43:12.000000000 -0500
++++ src/xterm-325/configure	2016-08-09 10:38:38.202941500 -0500
+@@ -2512,7 +2512,7 @@ case $host_os in
+ (aix[4-7]*)
+ 	cf_xopen_source="-D_ALL_SOURCE"
+ 	;;
+-(cygwin|msys)
++(msys)
+ 	cf_XOPEN_SOURCE=600
+ 	;;
+ (darwin[0-8].*)
+@@ -2540,7 +2540,7 @@ case $host_os in
+ 	cf_xopen_source="-D_SGI_SOURCE"
+ 	cf_XOPEN_SOURCE=
+ 	;;
+-(linux*|gnu*|mint*|k*bsd*-gnu)
++(linux*|gnu*|mint*|k*bsd*-gnu|cygwin*)
+ 
+ echo "$as_me:2545: checking if we must define _GNU_SOURCE" >&5
+ echo $ECHO_N "checking if we must define _GNU_SOURCE... $ECHO_C" >&6
+--- origsrc/xterm-325/main.c	2016-06-01 04:13:46.000000000 -0500
++++ src/xterm-325/main.c	2016-08-09 11:12:10.071894900 -0500
+@@ -185,7 +185,7 @@ static void HsSysError(int) GCC_NORETURN
+ #define WTMP
+ #endif
+ 
+-#if defined(USE_TTY_GROUP) || defined(USE_UTMP_SETGID)
++#if defined(USE_TTY_GROUP) || defined(USE_UTMP_SETGID) || defined(HAVE_INITGROUPS)
+ #include <grp.h>
+ #endif
+ 

@@ -1,5 +1,5 @@
 NAME="xterm"
-VERSION=324
+VERSION=325
 RELEASE=1
 CATEGORY="X11 Shells"
 SUMMARY="X11 terminal emulator"
@@ -15,7 +15,8 @@ SRC_DIR="xterm-${VERSION%[a-z]}"
 PATCH_URI="
 	http://pkgs.fedoraproject.org/cgit/rpms/xterm.git/plain/xterm-desktop.patch
 	http://pkgs.fedoraproject.org/cgit/rpms/xterm.git/plain/xterm-man-paths.patch
-	266-cygwin.patch
+	266-cygwin-term.patch
+	325-cygwin-ftm.patch
 "
 
 case ${VERSION} in *[a-z])
